@@ -1,6 +1,7 @@
 const readline = require('readline');
 let loop = 0 //count how many time to find the word and store it in config
-// determine what is the word that have most correspondance
+
+// determine which is the word that have most correspondance
 function computePower(computelist) {
     let bestword = [], result = 0;
 
@@ -9,44 +10,39 @@ function computePower(computelist) {
         let wordchars = computelist[word].split('');
         let tempRes = 0;
 
+        //compute the score of all word in the list against all word in the list
+        //the higher wins
         for (let i = 0; i < computelist.length; i++) {
-
-
-            //check letter at the right place
             let dicoword = computelist[i].split('');
             for (let j = 0; j < wordchars.length; j++) {
-
                 if (dicoword.includes(wordchars[j])) {
                     tempRes += 1;
 
-                    //replace the letter by _ to check the next 
+                    //replace the letter by _ to get multiple same letter
 
                     for (let a in dicoword) {
                         if (dicoword[a] == wordchars[j]) {
                             dicoword[a] = '_';
                         }
                     }
-
                 }
-
             }
-
-
-
         }
 
-        if (result < tempRes && !bestword.includes(computelist[word])) {
+        if (result == tempRes) {
+            bestword.push(computelist[word]);
+        }
+
+        if (result < tempRes ) {
             result = tempRes;
             bestword = [];
             bestword.push(computelist[word]);
 
         }
-        if (result == tempRes && !bestword.includes(computelist[word])) {
-            bestword.push(computelist[word]);
-        }
+       
 
     }
-    console.log("best score " + result)
+    
     console.log("the best word to apply is " + bestword);
 }
 
@@ -118,7 +114,7 @@ function filterList(computelist, filter, LastWord) {
 
 
     }
-
+    console.log(filteredlist.length+" words still remain eligibles");
     return filteredlist;
 
 }
@@ -224,6 +220,7 @@ const algo = async () => {
             console.log(`the best word to apply is ${first.filter(p => p.word_length == answers.total)[0].best_word}`)
         }
         else {
+            console.log('loading');
             computePower(wordlist);
         }
 
