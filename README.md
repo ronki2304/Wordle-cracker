@@ -45,3 +45,7 @@ two languages supported :
 ## add new language
 
 If someone (let me hope) wants a new language please share me a representative dictionary
+
+## Responsabilities
+
+I am not responsable if this code ruins your game experience
