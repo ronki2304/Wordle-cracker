@@ -76,7 +76,7 @@ while (true)
     
     result.push({word_length:cmpt, best_word:computePower(filterlist)})    
     cmpt++;
-
+}
 
 
 fs.writeFileSync(`resources/${language}_firstshot.json`,JSON.stringify(result));
