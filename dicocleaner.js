@@ -1,6 +1,10 @@
 var fs = require('fs');
 var rawlist = fs.readFileSync('resources/rawlist.csv').toString().split("\n");
 
+const myArgs = process.argv.slice(2);
+
+const language = myArgs[0];
+
 var newlist=[];
 for (let index in rawlist)
 {
@@ -11,4 +15,4 @@ console.log(rawlist.length)
 console.log(newlist.length)
 const unique = [ ...new Set(newlist)]
 console.log(unique.length)
-fs.writeFileSync('resources/english.csv',unique.join('\n'));
+fs.writeFileSync(`resources/${language}.csv`,unique.join('\n'));

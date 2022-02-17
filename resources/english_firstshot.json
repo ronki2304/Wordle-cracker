@@ -1,0 +1,29 @@
+[
+    {
+        "word_length": 2,
+        "best_word": [
+            "AE"
+        ]
+    },
+    {
+        "word_length": 3,
+        "best_word": [
+            "ATE",
+            "EAT",
+            "TEA"
+        ]
+    },
+    {
+        "word_length": 4,
+        "best_word": [
+            "ALOE",
+            "OLEA"
+        ]
+    },
+    {
+        "word_length": 5,
+        "best_word": [
+            "AROSE"
+        ]
+    }
+]

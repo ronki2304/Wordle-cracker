@@ -1,0 +1,34 @@
+[
+    {
+        "cmpt": 2,
+        "bestword": [
+            "EU"
+        ]
+    },
+    {
+        "cmpt": 3,
+        "bestword": [
+            "AIE"
+        ]
+    },
+    {
+        "cmpt": 4,
+        "bestword": [
+            "AIES",
+            "AISE",
+            "SAIE"
+        ]
+    },
+    {
+        "cmpt": 5,
+        "bestword": [
+            "AIRES",
+            "ARISE",
+            "RAIES",
+            "REAIS",
+            "SERAI",
+            "SERIA",
+            "SIERA"
+        ]
+    }
+]

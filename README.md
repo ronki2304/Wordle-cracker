@@ -44,8 +44,15 @@ two languages supported :
 
 ## add new language
 
-If someone (let me hope) wants a new language please share me a representative dictionary
+If someone (let me hope) wants a new language please share me a representative dictionary.
 
-## Responsabilities
+### Process for adding new language
+
+* format the dictionnary one word per line
+* save it in resources/rawlist.csv
+* run node dicocleaner `{language}`
+* run node computeFirstTry `{language}`
+
+## Disclaimer
 
 I am not responsible if this code ruins your game's experience
