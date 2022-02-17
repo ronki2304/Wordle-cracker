@@ -48,10 +48,9 @@ If someone (let me hope) wants a new language please share me a representative d
 
 ### Process for adding new language
 
-* format the dictionnary one word per line
+* format the dictionnary one word per line with carrier return : `\n`
 * save it in resources/rawlist.csv
-* run node dicocleaner `{language}`
-* run node computeFirstTry `{language}`
+* run npm run new_language `{language}` (linux only) (note it may take multiple hours   )
 
 ## Disclaimer
 

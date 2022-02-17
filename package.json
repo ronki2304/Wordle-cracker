@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "main": "node index"
+    "main": "node index",
+    "new_language": "node dicocleaner $npm_config_first; node computeFirstTry $npm_config_first"
   },
   "author": "",
   "license": "ISC",
