@@ -1,5 +1,5 @@
 const readline = require('readline');
-
+let loop = 0 //count how many time to find the word and store it in config
 // determine what is the word that have most correspondance
 function computePower(computelist) {
     let bestword = [], result = 0;
@@ -46,7 +46,7 @@ function computePower(computelist) {
         }
 
     }
-    console.log("dictionnary reduced to " + result)
+    console.log("best score " + result)
     console.log("the best word to apply is " + bestword);
 }
 
@@ -127,6 +127,8 @@ function filterList(computelist, filter, LastWord) {
 //load ressource file
 var fs = require('fs');
 
+//determine available language
+const config = JSON.parse(fs.readFileSync("resources/config.json"));
 
 let wordlist = [], answers = { result: '0' }, rawlist
 const rl = readline.createInterface({
@@ -136,8 +138,8 @@ const rl = readline.createInterface({
 //which languages
 const questionLanguage = () => {
     return new Promise((resolve, reject) => {
-        rl.question('Which languages do you want [french/english]? ', (answer) => {
-            answers.language = answer;
+        rl.question(`Which languages do you want ? [${config.languages}] `, (answer) => {
+            answers.language = answer.toLowerCase();
             resolve()
         })
     })
@@ -184,10 +186,20 @@ const questionResult = () => {
 }
 
 rl.on('close', function () {
-    if (wordlist.length!=0)
-        console.log('\nI won !!! the word is ' + answers.word);
-    else
-        console.log("sorry there is a mistake in your answers or the word is not in my dictionnary")
+    if (loop==0)
+        console.log("See you later");
+    else {
+        if (wordlist.length != 0){
+            console.log('\nI won !!! the word is ' + answers.word);
+            config.tries.push(loop);
+            fs.writeFileSync('resources/config.json',JSON.stringify(config))
+        }
+        else
+            console.log("sorry there is a mistake in your answers or the word is not in my dictionnary")
+        
+        
+        
+    }
     process.exit(0);
 });
 
@@ -203,8 +215,18 @@ const algo = async () => {
     await questionStart();
     wordlist = rawlist.filter(p => p.length == answers.total && (p.startsWith(answers.start) || !answers.start))
 
-    while ((answers.result.includes('1') || answers.result.includes('0')) && wordlist.length>0) {
-        computePower(wordlist);
+
+    while ((answers.result.includes('1') || answers.result.includes('0')) && wordlist.length > 0) {
+
+        if (loop==0 && !answers.start) {
+            firstTime = false;
+            let first = JSON.parse(fs.readFileSync(`resources/${answers.language}_firstshot.json`));
+            console.log(`the best word to apply is ${first.filter(p => p.word_length == answers.total)[0].best_word}`)
+        }
+        else {
+            computePower(wordlist);
+        }
+
         do { await questionWord(); }
         while (answers.word.includes(' ')) //lot of time i mixed the answer to this one and the next one
         do {
@@ -214,7 +236,7 @@ const algo = async () => {
 
         wordlist = filterList(wordlist, answers.result, answers.word);
 
-
+loop++;
     }
 
 
