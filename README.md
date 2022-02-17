@@ -48,4 +48,4 @@ If someone (let me hope) wants a new language please share me a representative d
 
 ## Responsabilities
 
-I am not responsable if this code ruins your game experience
+I am not responsible if this code ruins your game's experience
