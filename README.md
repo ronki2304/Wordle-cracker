@@ -1,6 +1,6 @@
 # Yes another Wordle solver
 
-I know I supposed there are tone of wordle-cracker. And I know why it is cool to code yours.
+I know there are tone of wordle solver. And I know why, because it is cool to code yours.
 
 So here is mine.
 
