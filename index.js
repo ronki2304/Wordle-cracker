@@ -46,7 +46,7 @@ function computePower(computelist) {
         }
 
     }
-    console.log ("dictionnary reduced to "+ result)
+    console.log("dictionnary reduced to " + result)
     console.log("the best word to apply is " + bestword);
 }
 
@@ -138,7 +138,6 @@ const questionLanguage = () => {
     return new Promise((resolve, reject) => {
         rl.question('Which languages do you want [french/english]? ', (answer) => {
             answers.language = answer;
-            rawlist = fs.readFileSync(`resources/${answer}.csv`).toString().split("\n");
             resolve()
         })
     })
@@ -185,29 +184,39 @@ const questionResult = () => {
 }
 
 rl.on('close', function () {
-    console.log('\nI won !!! the word is ' + answers.word);
+    if (wordlist.length!=0)
+        console.log('\nI won !!! the word is ' + answers.word);
+    else
+        console.log("sorry there is a mistake in your answers or the word is not in my dictionnary")
     process.exit(0);
 });
 
 const algo = async () => {
     console.log("let's start");
-    await questionLanguage();
+    do {
+        await questionLanguage();
+    }
+    while (!fs.existsSync(`resources/${answers.language}.csv`))
+
+    rawlist = fs.readFileSync(`resources/${answers.language}.csv`).toString().split("\n");
     await questionLetter();
     await questionStart();
     wordlist = rawlist.filter(p => p.length == answers.total && (p.startsWith(answers.start) || !answers.start))
 
-    while (answers.result.includes('1') || answers.result.includes('0')) {
+    while ((answers.result.includes('1') || answers.result.includes('0')) && wordlist.length>0) {
         computePower(wordlist);
         do { await questionWord(); }
         while (answers.word.includes(' ')) //lot of time i mixed the answer to this one and the next one
-        do{
-        await questionResult();}
+        do {
+            await questionResult();
+        }
         while (!answers.result.includes(' ')) //just to check you answer with the pattern
 
         wordlist = filterList(wordlist, answers.result, answers.word);
-        
-        
+
+
     }
+
 
     rl.close()
 }
