@@ -1,4 +1,5 @@
 var fs = require('fs');
+console.log("clean the dictionnary")
 var rawlist = fs.readFileSync('resources/rawlist.csv').toString().split("\n");
 
 const myArgs = process.argv.slice(2);

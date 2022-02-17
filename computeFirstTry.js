@@ -47,11 +47,12 @@ function computePower(computelist) {
         }
 
     }
-    console.log("dictionnary reduced to " + result)
+    console.log("best score " + result)
     console.log("the best word to apply is " + bestword);
     return bestword
 }
 
+console.log("start first stat phase")
 var fs = require('fs');
 
 const myArgs = process.argv.slice(2);
@@ -59,12 +60,13 @@ const myArgs = process.argv.slice(2);
 const language = myArgs[0];
 console.log('myArgs: ', language);
 
-if(!fs.existsSync(`resources/${language}.csv`))
-    return;
+if(!fs.existsSync(`resources/${language}.csv`)){
+    console.log("please fill language")
+    return;}
 
 rawlist = fs.readFileSync(`resources/${language}.csv`).toString().split("\n");
 
-let cmpt=2;
+let cmpt=11;
 let result=[];
 
 while (true)
@@ -80,3 +82,9 @@ while (true)
 
 
 fs.writeFileSync(`resources/${language}_firstshot.json`,JSON.stringify(result));
+
+//update the config file to add the new available language
+
+let config = JSON.parse(fs.readFileSync("resources/config.json"));
+config.languages.push(language);
+fs.writeFileSync('resources/config.json',JSON.stringify(config))
