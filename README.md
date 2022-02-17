@@ -1,4 +1,4 @@
-# Yes another Wordle Cracker
+# Yes another Wordle solver
 
 I know I supposed there are tone of wordle-cracker. And I know why it is cool to code yours.
 
