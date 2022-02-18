@@ -2,7 +2,7 @@ const readline = require('readline');
 let loop = 0 //count how many time to find the word and store it in config
 
 // determine which is the word that have most correspondance
-function computePower(computelist) {
+function computePower(computelist, secondturn=false) {
     let bestword = [], result = 0;
 
 
@@ -43,7 +43,16 @@ function computePower(computelist) {
 
     }
     
-    console.log("the best word to apply is " + bestword);
+    
+
+    //let's try to find the most relevant word in the list proposed just below
+    if (bestword.length>1 && !secondturn)
+    {
+        computePower(bestword,true);
+    }
+    else{
+        console.log("here is the list of best words to apply " + bestword);
+    }
 }
 
 //filter the dic list with the filter mask based on the last word
