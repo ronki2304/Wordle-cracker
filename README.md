@@ -1,8 +1,12 @@
-# Yes another Wordle solver
+# Yes another Wordle/nerdle solver
 
 I know there are tone of wordle solver. And I know why, because it is cool to code yours.
 
 So here is mine.
+
+## Nerdle
+
+:warning: Breaking news, this solver works with nerdle too
 
 ## How to install it
 

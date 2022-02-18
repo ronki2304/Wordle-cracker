@@ -7,6 +7,8 @@ function computePower(computelist) {
 
 
     for (let word in computelist) {
+        if (word%1000==0)
+            console.log("line already processed : "+word);
         let wordchars = computelist[word].split('');
         let tempRes = 0;
 
@@ -66,7 +68,7 @@ if(!fs.existsSync(`resources/${language}.csv`)){
 
 rawlist = fs.readFileSync(`resources/${language}.csv`).toString().split("\n");
 
-let cmpt=11;
+let cmpt=8;
 let result=[];
 
 while (true)
