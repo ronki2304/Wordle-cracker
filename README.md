@@ -44,8 +44,12 @@ basically this algo find the word in three tries
 
 two languages supported :
 
-* english
-* french
+* english (tested)
+* french (tested)
+* italian (not validated by italian people)
+* dutch (not validated by dutch people)
+* portugues (not validated by portugues people)
+* spanish (not validated by spanish people)
 
 ## add new language
 
