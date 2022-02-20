@@ -92,5 +92,8 @@ fs.writeFileSync(`resources/firstShoot.json`,JSON.stringify(firstshoot));
 //update the config file to add the new available language
 
 let config = JSON.parse(fs.readFileSync("resources/config.json"));
+if (!config.languages.includes(language))
+{
 config.languages.push(language);
 fs.writeFileSync('resources/config.json',JSON.stringify(config))
+}
