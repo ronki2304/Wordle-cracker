@@ -1,0 +1,1186 @@
+{
+    "dutch": [
+        {
+            "word_length": 2,
+            "best_word": [
+                "IS",
+                "SI"
+            ]
+        },
+        {
+            "word_length": 3,
+            "best_word": [
+                "AIO"
+            ]
+        },
+        {
+            "word_length": 4,
+            "best_word": [
+                "OASE"
+            ]
+        },
+        {
+            "word_length": 5,
+            "best_word": [
+                "ATIES"
+            ]
+        },
+        {
+            "word_length": 6,
+            "best_word": [
+                "ARIENS",
+                "IRENAS",
+                "NAREIS",
+                "REINAS"
+            ]
+        },
+        {
+            "word_length": 7,
+            "best_word": [
+                "NAREIST",
+                "RETINAS",
+                "RETSINA",
+                "SATIREN"
+            ]
+        },
+        {
+            "word_length": 8,
+            "best_word": [
+                "LATRINES"
+            ]
+        },
+        {
+            "word_length": 9,
+            "best_word": [
+                "RELATIONS"
+            ]
+        },
+        {
+            "word_length": 10,
+            "best_word": [
+                "ROTSEILAND"
+            ]
+        },
+        {
+            "word_length": 11,
+            "best_word": [
+                "OMSTANDIGER"
+            ]
+        },
+        {
+            "word_length": 12,
+            "best_word": [
+                "VOLSTANDIGER"
+            ]
+        },
+        {
+            "word_length": 13,
+            "best_word": [
+                "KOUDESTRALING"
+            ]
+        },
+        {
+            "word_length": 14,
+            "best_word": [
+                "DESIGNPLATFORM"
+            ]
+        },
+        {
+            "word_length": 15,
+            "best_word": [
+                "GRONDSPECULATIE"
+            ]
+        },
+        {
+            "word_length": 16,
+            "best_word": [
+                "OPLEVERINGSDATUM"
+            ]
+        },
+        {
+            "word_length": 17,
+            "best_word": [
+                "BETALINGSOPDRACHT"
+            ]
+        },
+        {
+            "word_length": 18,
+            "best_word": [
+                "ZUIDSCHOTSBERGLAND"
+            ]
+        },
+        {
+            "word_length": 19,
+            "best_word": [
+                "TANKOPSLAGBEDRIJVEN"
+            ]
+        },
+        {
+            "word_length": 20,
+            "best_word": [
+                "SCHULDENPROBLEMATIEK"
+            ]
+        },
+        {
+            "word_length": 21,
+            "best_word": [
+                "RAAMBEKLEDINGSPRODUCT"
+            ]
+        },
+        {
+            "word_length": 22,
+            "best_word": [
+                "AFLUISTERMOGELIJKHEDEN"
+            ]
+        },
+        {
+            "word_length": 23,
+            "best_word": [
+                "RAAMBEKLEDINGSPRODUCTEN"
+            ]
+        },
+        {
+            "word_length": 24,
+            "best_word": [
+                "OUDERSCHAPSVERLOFKORTING"
+            ]
+        },
+        {
+            "word_length": 25,
+            "best_word": [
+                "PRIJSKWALITEITSVERHOUDING"
+            ]
+        },
+        {
+            "word_length": 26,
+            "best_word": [
+                "CHAMPIONSLEAGUEWEDSTRIJDEN"
+            ]
+        },
+        {
+            "word_length": 27,
+            "best_word": [
+                "VERANTWOORDELIJKHEIDSGEBIED"
+            ]
+        },
+        {
+            "word_length": 28,
+            "best_word": [
+                "BETROUWBAARHEIDSVERKLARINGEN"
+            ]
+        },
+        {
+            "word_length": 29,
+            "best_word": [
+                "VERANTWOORDELIJKHEIDSGEBIEDEN"
+            ]
+        },
+        {
+            "word_length": 30,
+            "best_word": [
+                "AUTOVERZEKERINGSMAATSCHAPPIJEN"
+            ]
+        },
+        {
+            "word_length": 31,
+            "best_word": [
+                "BRANDVERZEKERINGSMAATSCHAPPIJEN"
+            ]
+        },
+        {
+            "word_length": 32,
+            "best_word": [
+                "SOFTWAREONTWIKKELINGSGEREEDSCHAP"
+            ]
+        },
+        {
+            "word_length": 33,
+            "best_word": [
+                "ARBEIDSONGESCHIKTHEIDSVERZEKERING",
+                "ARBEIDSONGESCHIKTHEIDSVOORZIENING"
+            ]
+        },
+        {
+            "word_length": 34,
+            "best_word": [
+                "GROOTAUSTRALISCHSCHEIDINGSGEBERGTE",
+                "ONDERWIJSONTWIKKELINGSACTIVITEITEN"
+            ]
+        },
+        {
+            "word_length": 35,
+            "best_word": [
+                "SOFTWAREONTWIKKELINGSGEREEDSCHAPPEN"
+            ]
+        },
+        {
+            "word_length": 36,
+            "best_word": [
+                "BEROEPSAANSPRAKELIJKHEIDSVERZEKERING"
+            ]
+        },
+        {
+            "word_length": 37,
+            "best_word": [
+                "ELEKTRICITEITSDISTRIBUTIENETBEHEERDER",
+                "ONTWIKKELINGSSAMENWERKINGSORGANISATIE"
+            ]
+        },
+        {
+            "word_length": 38,
+            "best_word": [
+                "RIOOLWATERZUIVERINGSINSTALLATIELOCATIE"
+            ]
+        },
+        {
+            "word_length": 39,
+            "best_word": [
+                "RIOOLWATERZUIVERINGSINSTALLATIELOCATIES"
+            ]
+        }
+    ],
+    "english": [
+        {
+            "word_length": 2,
+            "best_word": [
+                "AE"
+            ]
+        },
+        {
+            "word_length": 3,
+            "best_word": [
+                "ATE",
+                "EAT",
+                "TEA"
+            ]
+        },
+        {
+            "word_length": 4,
+            "best_word": [
+                "ALOE",
+                "OLEA"
+            ]
+        },
+        {
+            "word_length": 5,
+            "best_word": [
+                "AROSE"
+            ]
+        },
+        {
+            "word_length": 6,
+            "best_word": [
+                "ALINER",
+                "LANIER",
+                "LARINE",
+                "LINEAR",
+                "NAILER"
+            ]
+        },
+        {
+            "word_length": 7,
+            "best_word": [
+                "ENTRAIL",
+                "LATRINE",
+                "RELIANT",
+                "RETINAL",
+                "TRAINEL",
+                "TRENAIL"
+            ]
+        },
+        {
+            "word_length": 8,
+            "best_word": [
+                "ORIENTAL",
+                "RELATION"
+            ]
+        },
+        {
+            "word_length": 9,
+            "best_word": [
+                "CLARIONET",
+                "CROTALINE"
+            ]
+        },
+        {
+            "word_length": 10,
+            "best_word": [
+                "INTERPOSAL"
+            ]
+        },
+        {
+            "word_length": 11,
+            "best_word": [
+                "SUPERLATION"
+            ]
+        },
+        {
+            "word_length": 12,
+            "best_word": [
+                "STENOGRAPHIC"
+            ]
+        },
+        {
+            "word_length": 13,
+            "best_word": [
+                "PNEUMOGASTRIC"
+            ]
+        },
+        {
+            "word_length": 14,
+            "best_word": [
+                "STENOGRAPHICAL"
+            ]
+        },
+        {
+            "word_length": 15,
+            "best_word": [
+                "PULMOBRANCHIATE"
+            ]
+        },
+        {
+            "word_length": 16,
+            "best_word": [
+                "COMMENSURABILITY"
+            ]
+        },
+        {
+            "word_length": 17,
+            "best_word": [
+                "OMPHALOMESENTERIC"
+            ]
+        },
+        {
+            "word_length": 18,
+            "best_word": [
+                "INCOMMENSURABILITY"
+            ]
+        },
+        {
+            "word_length": 19,
+            "best_word": [
+                "CONTRADISTINGUISHED"
+            ]
+        },
+        {
+            "word_length": 20,
+            "best_word": [
+                "KINGCHARLES SPANIEL "
+            ]
+        },
+        {
+            "word_length": 21,
+            "best_word": [
+                "CLAUDELORRAINE GLASS ",
+                "WIDMANSTATTENFIGURES "
+            ]
+        },
+        {
+            "word_length": 22,
+            "best_word": [
+                "WALLERIANDEGENERATION "
+            ]
+        }
+    ],
+    "french": [
+        {
+            "word_length": 2,
+            "best_word": [
+                "EU"
+            ]
+        },
+        {
+            "word_length": 3,
+            "best_word": [
+                "AIE"
+            ]
+        },
+        {
+            "word_length": 4,
+            "best_word": [
+                "AIES",
+                "AISE",
+                "SAIE"
+            ]
+        },
+        {
+            "word_length": 5,
+            "best_word": [
+                "AIRES",
+                "ARISE",
+                "RAIES",
+                "REAIS",
+                "SERAI",
+                "SERIA",
+                "SIERA"
+            ]
+        },
+        {
+            "word_length": "6",
+            "best_word": [
+                "ETIRAS",
+                "ITERAS",
+                "RESAIT",
+                "RESTAI",
+                "SATIRE",
+                "SERAIT",
+                "SERIAT",
+                "STARIE",
+                "TARIES",
+                "TERSAI",
+                "TIARES",
+                "TRAIES"
+            ]
+        },
+        {
+            "word_length": "7",
+            "best_word": [
+                "ARISENT",
+                "ENTRAIS",
+                "INSERAT",
+                "RATINES",
+                "RESINAT",
+                "RIANTES",
+                "SATINER",
+                "SENTIRA",
+                "SERIANT",
+                "SERINAT",
+                "TANISER",
+                "TARSIEN",
+                "TRAINES",
+                "TRANSIE",
+                "TSARINE"
+            ]
+        },
+        {
+            "word_length": "8",
+            "best_word": [
+                "NOTAIRES",
+                "NOTARIES",
+                "NOTERAIS",
+                "ORIENTAS",
+                "ROSAIENT"
+            ]
+        },
+        {
+            "word_length": "9",
+            "best_word": [
+                "ENTOURAIS",
+                "SOURIANTE"
+            ]
+        },
+        {
+            "word_length": "10",
+            "best_word": [
+                "COURSAIENT,COURTISANE,ENCROUTAIS,RECUSATION"
+            ]
+        },
+        {
+            "word_length": 11,
+            "best_word": [
+                "CONSULTERAI",
+                "ULCERATIONS"
+            ]
+        },
+        {
+            "word_length": 12,
+            "best_word": [
+                "CAPITULERONS",
+                "RECAPITULONS"
+            ]
+        },
+        {
+            "word_length": 13,
+            "best_word": [
+                "SURPLOMBAIENT"
+            ]
+        },
+        {
+            "word_length": 14,
+            "best_word": [
+                "COMPULSERAIENT"
+            ]
+        },
+        {
+            "word_length": 15,
+            "best_word": [
+                "CULPABILISERONT"
+            ]
+        },
+        {
+            "word_length": 16,
+            "best_word": [
+                "THERMONUCLEAIRES"
+            ]
+        },
+        {
+            "word_length": 17,
+            "best_word": [
+                "SURMEDICALISATION"
+            ]
+        },
+        {
+            "word_length": 18,
+            "best_word": [
+                "DACTYLOGRAPHIERONS"
+            ]
+        },
+        {
+            "word_length": 19,
+            "best_word": [
+                "DACTYLOGRAPHIASSENT",
+                "DACTYLOGRAPHIERIONS",
+                "STENODACTYLOGRAPHIE"
+            ]
+        },
+        {
+            "word_length": 20,
+            "best_word": [
+                "ANTIGOUVERNEMENTALES",
+                "CONTRACTUALISERAIENT"
+            ]
+        },
+        {
+            "word_length": 21,
+            "best_word": [
+                "INTERGOUVERNEMENTALES"
+            ]
+        },
+        {
+            "word_length": 22,
+            "best_word": [
+                "CONSTITUTIONNALISERENT"
+            ]
+        },
+        {
+            "word_length": 23,
+            "best_word": [
+                "CONSTITUTIONNALISASSIEZ"
+            ]
+        },
+        {
+            "word_length": 24,
+            "best_word": [
+                "CONSTITUTIONNALISASSIONS"
+            ]
+        },
+        {
+            "word_length": 25,
+            "best_word": [
+                "ANTICONSTITUTIONNELLEMENT"
+            ]
+        }
+    ],
+    "italian": [
+        {
+            "word_length": 2,
+            "best_word": [
+                "EI"
+            ]
+        },
+        {
+            "word_length": 3,
+            "best_word": [
+                "AIE"
+            ]
+        },
+        {
+            "word_length": 4,
+            "best_word": [
+                "AERI",
+                "AIRE",
+                "ARIE"
+            ]
+        },
+        {
+            "word_length": 5,
+            "best_word": [
+                "AIOLE"
+            ]
+        },
+        {
+            "word_length": 6,
+            "best_word": [
+                "OTARIE",
+                "ROTAIE",
+                "TEORIA"
+            ]
+        },
+        {
+            "word_length": 7,
+            "best_word": [
+                "ARETINO",
+                "ARIENTO",
+                "ERNIATO",
+                "ITERANO",
+                "NOTERAI",
+                "NOTERIA",
+                "ONERATI",
+                "ORIENTA",
+                "ORNIATE",
+                "REATINO",
+                "TENARIO",
+                "TONERAI",
+                "TROIANE"
+            ]
+        },
+        {
+            "word_length": 8,
+            "best_word": [
+                "INTASERO",
+                "ORTENSIA",
+                "RATIONES",
+                "RESINATO",
+                "RISONATE",
+                "SENATORI",
+                "SEROTINA",
+                "STONERAI"
+            ]
+        },
+        {
+            "word_length": 9,
+            "best_word": [
+                "CENSORATI",
+                "CERTOSINA",
+                "ESTRICANO",
+                "NECROSATI",
+                "ROSICANTE",
+                "SCONTERAI",
+                "SINCERATO",
+                "SONATRICE",
+                "TRISECANO"
+            ]
+        },
+        {
+            "word_length": 10,
+            "best_word": [
+                "CRISANTEMO",
+                "MARCONISTE",
+                "SCORAMENTI"
+            ]
+        },
+        {
+            "word_length": 11,
+            "best_word": [
+                "CENTRALISMO",
+                "INTERSCALMO"
+            ]
+        },
+        {
+            "word_length": 12,
+            "best_word": [
+                "SCALTRENDOMI"
+            ]
+        },
+        {
+            "word_length": 13,
+            "best_word": [
+                "RISCALDAMENTO"
+            ]
+        },
+        {
+            "word_length": 14,
+            "best_word": [
+                "SUPERCONGELATI"
+            ]
+        },
+        {
+            "word_length": 15,
+            "best_word": [
+                "COMPRENSIBILITA"
+            ]
+        },
+        {
+            "word_length": 16,
+            "best_word": [
+                "PRERISCALDAMENTO"
+            ]
+        },
+        {
+            "word_length": 17,
+            "best_word": [
+                "TRIBOLUMINESCENZA"
+            ]
+        },
+        {
+            "word_length": 18,
+            "best_word": [
+                "SOPRARISCALDAMENTO"
+            ]
+        },
+        {
+            "word_length": 19,
+            "best_word": [
+                "ELETTROLUMINESCENZA"
+            ]
+        },
+        {
+            "word_length": 20,
+            "best_word": [
+                "SUPERMINICALCOLATORE",
+                "SUPERMINICALCOLATORI"
+            ]
+        },
+        {
+            "word_length": 21,
+            "best_word": [
+                "GIURISDIZIONALISTICHE"
+            ]
+        },
+        {
+            "word_length": 22,
+            "best_word": [
+                "SOTTOPROLETARIZZANDOSI"
+            ]
+        },
+        {
+            "word_length": 23,
+            "best_word": [
+                "TELERADIOTRASMETTERANNO"
+            ]
+        },
+        {
+            "word_length": 24,
+            "best_word": [
+                "AUTOBLINDOMITRAGLIATRICE"
+            ]
+        },
+        {
+            "word_length": 25,
+            "best_word": [
+                "POLIDESOSSIRIBONUCLEOTIDE",
+                "POLIDESOSSIRIBONUCLEOTIDI"
+            ]
+        }
+    ],
+    "nerdle": [
+        {
+            "word_length": 8,
+            "best_word": [
+                "48-12=36",
+                "48-16=32",
+                "48-32=16",
+                "48-36=12",
+                "84-21=63",
+                "84-23=61",
+                "84-61=23",
+                "84-63=21"
+            ]
+        }
+    ],
+    "portugues": [
+        {
+            "word_length": 2,
+            "best_word": [
+                "AO"
+            ]
+        },
+        {
+            "word_length": 3,
+            "best_word": [
+                "EIA",
+                "IAE"
+            ]
+        },
+        {
+            "word_length": 4,
+            "best_word": [
+                "IAUO",
+                "UAIO"
+            ]
+        },
+        {
+            "word_length": 5,
+            "best_word": [
+                "AEIOU"
+            ]
+        },
+        {
+            "word_length": 6,
+            "best_word": [
+                "ARECIO",
+                "CAEIRO",
+                "COREIA"
+            ]
+        },
+        {
+            "word_length": 7,
+            "best_word": [
+                "ANICORE",
+                "ARENICO",
+                "CANEIRO",
+                "CENARIO",
+                "CENOIRA",
+                "CINAREO",
+                "ERANICO",
+                "OCNERIA",
+                "OCREINA",
+                "ORCEINA",
+                "REINACO"
+            ]
+        },
+        {
+            "word_length": 8,
+            "best_word": [
+                "ANTERICO",
+                "CANTEIRO",
+                "CERIANTO",
+                "CIANORTE",
+                "CONTEIRA",
+                "CORIANTE",
+                "CTENARIO",
+                "ENCOITAR",
+                "ENTOICAR",
+                "NARTECIO",
+                "NEARTICO",
+                "NECTARIO",
+                "NOTICERA",
+                "RATONICE",
+                "RENATICO",
+                "RINOTECA"
+            ]
+        },
+        {
+            "word_length": 9,
+            "best_word": [
+                "CITRONELA",
+                "CLARETINO",
+                "CLARINETO",
+                "CORNELITA",
+                "LACERTINO",
+                "LITRACENO",
+                "TRICOLENA"
+            ]
+        },
+        {
+            "word_length": 10,
+            "best_word": [
+                "CRISANTELO"
+            ]
+        },
+        {
+            "word_length": 11,
+            "best_word": [
+                "ALMISCRENTO"
+            ]
+        },
+        {
+            "word_length": 12,
+            "best_word": [
+                "CULTERANISMO"
+            ]
+        },
+        {
+            "word_length": 13,
+            "best_word": [
+                "PLECTROMANTIS"
+            ]
+        },
+        {
+            "word_length": 14,
+            "best_word": [
+                "ESPONGICULTURA"
+            ]
+        },
+        {
+            "word_length": 15,
+            "best_word": [
+                "TENDINOMUSCULAR"
+            ]
+        },
+        {
+            "word_length": 16,
+            "best_word": [
+                "CUMBERLANDISTICO"
+            ]
+        },
+        {
+            "word_length": 17,
+            "best_word": [
+                "HORTELASDECAMPINA"
+            ]
+        },
+        {
+            "word_length": 18,
+            "best_word": [
+                "DOUTORCAMPOLINENSE"
+            ]
+        },
+        {
+            "word_length": 19,
+            "best_word": [
+                "MULUNGUCRISTADEGALO"
+            ]
+        },
+        {
+            "word_length": 20,
+            "best_word": [
+                "MOSCHELLANDSBERGUITA"
+            ]
+        },
+        {
+            "word_length": 21,
+            "best_word": [
+                "ATUNSDEGRELHACOMPRIDA"
+            ]
+        },
+        {
+            "word_length": 22,
+            "best_word": [
+                "PIMENTADEFRUTOGANCHOSO"
+            ]
+        },
+        {
+            "word_length": 23,
+            "best_word": [
+                "PIMENTASDEFRUTOGANCHOSO"
+            ]
+        },
+        {
+            "word_length": 24,
+            "best_word": [
+                "CATINGUEIROSDEFOLHAMIUDA"
+            ]
+        },
+        {
+            "word_length": 25,
+            "best_word": [
+                "SAGUIMPRETODEBIGODEBRANCO"
+            ]
+        },
+        {
+            "word_length": 26,
+            "best_word": [
+                "DIMETATARSOQUARTIFALANGICO"
+            ]
+        },
+        {
+            "word_length": 27,
+            "best_word": [
+                "FLORDOSMACAQUINHOSDEPENDURA"
+            ]
+        },
+        {
+            "word_length": 28,
+            "best_word": [
+                "CENTAUREASMENORESPERFOLIADAS"
+            ]
+        },
+        {
+            "word_length": 29,
+            "best_word": [
+                "FEIJAOMANTEIGABRANCODAARGELIA"
+            ]
+        },
+        {
+            "word_length": 30,
+            "best_word": [
+                "FEIJÕESMANTEIGAPRETOSDAARGELIA",
+                "TRIFENILALQUILIDENOFOSFORANICO"
+            ]
+        },
+        {
+            "word_length": 31,
+            "best_word": [
+                "FEIJÕESMANTEIGABRANCOSDAARGELIA"
+            ]
+        },
+        {
+            "word_length": 32,
+            "best_word": [
+                "FEIJÕESMANTEIGASBRANCOSDAARGELIA"
+            ]
+        },
+        {
+            "word_length": 33,
+            "best_word": [
+                "FEIJÕESMANTEIGAMARAVILHADOMERCADO"
+            ]
+        },
+        {
+            "word_length": 34,
+            "best_word": [
+                "FEIJÕESMANTEIGAMARAVILHASDOMERCADO"
+            ]
+        },
+        {
+            "word_length": 35,
+            "best_word": [
+                "BETAEPOETINAMETOXIPOLIETILENOGLICOL"
+            ]
+        }
+    ],
+    "spanish": [
+        {
+            "word_length": 2,
+            "best_word": [
+                "EA"
+            ]
+        },
+        {
+            "word_length": 3,
+            "best_word": [
+                "OIA"
+            ]
+        },
+        {
+            "word_length": 4,
+            "best_word": [
+                "OREA"
+            ]
+        },
+        {
+            "word_length": 5,
+            "best_word": [
+                "AIREO"
+            ]
+        },
+        {
+            "word_length": 6,
+            "best_word": [
+                "ASERIO",
+                "OREAIS",
+                "OSERIA"
+            ]
+        },
+        {
+            "word_length": 7,
+            "best_word": [
+                "ANISERO",
+                "ANOREIS",
+                "ASIERON",
+                "ORINASE",
+                "SENARIO",
+                "SENORIA",
+                "SONERIA",
+                "SONREIA"
+            ]
+        },
+        {
+            "word_length": 8,
+            "best_word": [
+                "ACORNEIS",
+                "ANCOREIS",
+                "ARCIONES",
+                "ARENISCO",
+                "ARSENICO",
+                "ASERCION",
+                "CENSORIA",
+                "CESARINO",
+                "CONREAIS",
+                "CORNEAIS",
+                "COSERIAN",
+                "COSIERAN",
+                "ENCORAIS",
+                "ENROCAIS",
+                "ESCARNIO",
+                "INCOARES",
+                "RACIONES",
+                "RECOSIAN",
+                "ROCIASEN",
+                "RONCEAIS"
+            ]
+        },
+        {
+            "word_length": 9,
+            "best_word": [
+                "CANTERIOS",
+                "CONTAREIS",
+                "CONTRAEIS",
+                "CRASIENTO",
+                "ENTOSICAR",
+                "NOTARICES",
+                "RECONTAIS"
+            ]
+        },
+        {
+            "word_length": 10,
+            "best_word": [
+                "CINTAREMOS",
+                "CRISANTEMO",
+                "TINCAREMOS"
+            ]
+        },
+        {
+            "word_length": 11,
+            "best_word": [
+                "CENTRALISMO"
+            ]
+        },
+        {
+            "word_length": 12,
+            "best_word": [
+                "CULTERANISMO"
+            ]
+        },
+        {
+            "word_length": 13,
+            "best_word": [
+                "DOCUMENTARAIS",
+                "DOCUMENTAREIS",
+                "DOCUMENTARIAS"
+            ]
+        },
+        {
+            "word_length": 14,
+            "best_word": [
+                "NOCTAMBULAREIS"
+            ]
+        },
+        {
+            "word_length": 15,
+            "best_word": [
+                "DESCOMPLETARIAN"
+            ]
+        },
+        {
+            "word_length": 16,
+            "best_word": [
+                "DESMULTIPLICARON"
+            ]
+        },
+        {
+            "word_length": 17,
+            "best_word": [
+                "RESPLANDECIMIENTO"
+            ]
+        },
+        {
+            "word_length": 18,
+            "best_word": [
+                "DESCENTRALIZABAMOS"
+            ]
+        },
+        {
+            "word_length": 19,
+            "best_word": [
+                "CONCEPTUALIZARIAMOS"
+            ]
+        },
+        {
+            "word_length": 20,
+            "best_word": [
+                "INCOMPATIBILIZAREMOS"
+            ]
+        },
+        {
+            "word_length": 21,
+            "best_word": [
+                "DESCONTEXTUALIZARAMOS",
+                "DESCONTEXTUALIZAREMOS"
+            ]
+        },
+        {
+            "word_length": 22,
+            "best_word": [
+                "DESCONTEXTUALIZARIAMOS"
+            ]
+        },
+        {
+            "word_length": 23,
+            "best_word": [
+                "CORRESPONSABILIZARIAMOS"
+            ]
+        }
+    ]
+}

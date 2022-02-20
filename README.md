@@ -57,6 +57,19 @@ If someone (let me hope) wants a new language please share me a representative d
 * save it in resources/rawlist.csv
 * run `npm run new_language --first={language}` (linux only) (note it may take multiple hours   )
 
+## statistic file
+
+A basic statistic file is created on your computer to save the algo performance. Here is the structure :
+
+```json
+{
+    "{langague}" :
+        "{length}":[{all count tries}]
+}
+```
+
+this file is totaly useless except if you love stat
+
 ## Disclaimer
 
 I am not responsible if this code ruins your game's experience

@@ -196,8 +196,24 @@ rl.on('close', function () {
     else {
         if (wordlist.length != 0){
             console.log('\nI won !!! the word is ' + answers.word);
-            config.tries.push(loop);
-            fs.writeFileSync('resources/config.json',JSON.stringify(config))
+
+            //saving stat
+            let stat 
+            //if the file exist use it or create it
+            if (fs.existsSync('resources/stat.json'))
+                stat=JSON.parse(fs.readFileSync('resources/stat.json'))
+            else
+                stat={}
+                
+            if (!stat[answers.language])
+                stat[answers.language]={}
+            
+            if (!stat[answers.language][answers.total])
+                stat[answers.language][answers.total] = []
+
+                stat[answers.language][answers.total].push(loop);
+            
+            fs.writeFileSync('resources/stat.json',JSON.stringify(stat))
         }
         else
             console.log("sorry there is a mistake in your answers or the word is not in my dictionnary")
@@ -225,7 +241,7 @@ const algo = async () => {
 
         if (loop==0 && !answers.start) {
             firstTime = false;
-            let first = JSON.parse(fs.readFileSync(`resources/${answers.language}_firstshot.json`));
+            let first = JSON.parse(fs.readFileSync(`resources/firstShoot.json`))[answers.language];
             console.log(`the best word to apply is ${first.filter(p => p.word_length == answers.total)[0].best_word}`)
         }
         else {

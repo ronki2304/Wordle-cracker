@@ -82,8 +82,12 @@ while (true)
     cmpt++;
 }
 
+//update first shoot json file
+var firstshoot=JSON.parse(fs.readFileSync('resources/firstShoot.json'))
 
-fs.writeFileSync(`resources/${language}_firstshot.json`,JSON.stringify(result));
+firstshoot[language] = result;
+
+fs.writeFileSync(`resources/firstShoot.json`,JSON.stringify(firstshoot));
 
 //update the config file to add the new available language
 

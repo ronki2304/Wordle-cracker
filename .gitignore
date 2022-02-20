@@ -132,6 +132,6 @@ dist
 #vscode
 .vscode/
 
-#config file with stat
-resources/config.json
+#stat file and raw list
 resources/rawlist.csv
+resources/stat.json
