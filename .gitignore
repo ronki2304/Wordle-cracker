@@ -134,3 +134,4 @@ dist
 
 #config file with stat
 resources/config.json
+resources/rawlist.csv

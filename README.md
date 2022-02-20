@@ -43,6 +43,7 @@ basically this algo find the word in three tries
 ## Supported languages
 
 two languages supported :
+
 * english
 * french
 
@@ -54,7 +55,7 @@ If someone (let me hope) wants a new language please share me a representative d
 
 * format the dictionnary one word per line with carrier return : `\n`
 * save it in resources/rawlist.csv
-* run npm run new_language --first=`{language}` (linux only) (note it may take multiple hours   )
+* run `npm run new_language --first={language}` (linux only) (note it may take multiple hours   )
 
 ## Disclaimer
 

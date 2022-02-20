@@ -68,7 +68,7 @@ if(!fs.existsSync(`resources/${language}.csv`)){
 
 rawlist = fs.readFileSync(`resources/${language}.csv`).toString().split("\n");
 
-let cmpt=8;
+let cmpt=2;
 let result=[];
 
 while (true)
