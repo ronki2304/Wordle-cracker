@@ -55,7 +55,7 @@ If someone (let me hope) wants a new language please share me a representative d
 
 * format the dictionnary one word per line with carrier return : `\n`
 * save it in resources/rawlist.csv
-* run `npm run new_language --first={language}` (linux only) (note it may take multiple hours   )
+* run `npm run new_language --first={language}` (note it may take multiple hours   )
 
 ## statistic file
 

@@ -7,8 +7,8 @@ function computePower(computelist) {
 
 
     for (let word in computelist) {
-        if (word%1000==0)
-            console.log("line already processed : "+word);
+        if (word % 1000 == 0)
+            console.log("line already processed : " + word);
         let wordchars = computelist[word].split('');
         let tempRes = 0;
 
@@ -54,46 +54,75 @@ function computePower(computelist) {
     return bestword
 }
 
-console.log("start first stat phase")
-var fs = require('fs');
+//cleaning phase
 
-const myArgs = process.argv.slice(2);
+function clean() {
+    var fs = require('fs');
+    console.log("clean the dictionnary")
+    var rawlist = fs.readFileSync('resources/rawlist.csv').toString().split("\n");
 
-const language = myArgs[0];
-console.log('myArgs: ', language);
+    const myArgs = process.argv.slice(2);
 
-if(!fs.existsSync(`resources/${language}.csv`)){
-    console.log("please fill language")
-    return;}
+    const language = myArgs[0];
 
-rawlist = fs.readFileSync(`resources/${language}.csv`).toString().split("\n");
-
-let cmpt=2;
-let result=[];
-
-while (true)
-{
-    let filterlist = rawlist.filter(p => p.length == cmpt);
-    
-    if (filterlist.length==0)
-        break;
-    
-    result.push({word_length:cmpt, best_word:computePower(filterlist)})    
-    cmpt++;
+    var newlist = [];
+    for (let index in rawlist) {
+        if (!rawlist[index].includes('-') && !rawlist[index].includes('#') && !rawlist[index].includes('\''))
+            newlist.push(rawlist[index].replace(" ", "").toUpperCase());
+    }
+    console.log(rawlist.length)
+    console.log(newlist.length)
+    const unique = [...new Set(newlist)]
+    console.log(unique.length)
+    fs.writeFileSync(`resources/${language}.csv`, unique.join('\n'));
 }
 
-//update first shoot json file
-var firstshoot=JSON.parse(fs.readFileSync('resources/firstShoot.json'))
 
-firstshoot[language] = result;
 
-fs.writeFileSync(`resources/firstShoot.json`,JSON.stringify(firstshoot));
+function computeAll() {
+    console.log("start first stat phase")
+    var fs = require('fs');
 
-//update the config file to add the new available language
+    const myArgs = process.argv.slice(2);
 
-let config = JSON.parse(fs.readFileSync("resources/config.json"));
-if (!config.languages.includes(language))
-{
-config.languages.push(language);
-fs.writeFileSync('resources/config.json',JSON.stringify(config))
+    const language = myArgs[0];
+    console.log('myArgs: ', language);
+
+    if (!fs.existsSync(`resources/${language}.csv`)) {
+        console.log("please fill language")
+        return;
+    }
+
+    rawlist = fs.readFileSync(`resources/${language}.csv`).toString().split("\n");
+
+    let cmpt = 2;
+    let result = [];
+
+    while (true) {
+        let filterlist = rawlist.filter(p => p.length == cmpt);
+
+        if (filterlist.length == 0)
+            break;
+
+        result.push({ word_length: cmpt, best_word: computePower(filterlist) })
+        cmpt++;
+    }
+
+    //update first shoot json file
+    var firstshoot = JSON.parse(fs.readFileSync('resources/firstShoot.json'))
+
+    firstshoot[language] = result;
+
+    fs.writeFileSync(`resources/firstShoot.json`, JSON.stringify(firstshoot));
+
+    //update the config file to add the new available language
+
+    let config = JSON.parse(fs.readFileSync("resources/config.json"));
+    if (!config.languages.includes(language)) {
+        config.languages.push(language);
+        fs.writeFileSync('resources/config.json', JSON.stringify(config))
+    }
 }
+
+clean();
+computeAll();
