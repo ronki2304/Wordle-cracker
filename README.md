@@ -16,7 +16,7 @@ So here is mine.
 
 ## Algo
 
-```mermaid
+```mermaid2 2 0 2 2 2 0 2
 graph TD;
     A["dictionary extraction"]-->B
     B["find the word that have the most letter in common with the others"]-->C;
