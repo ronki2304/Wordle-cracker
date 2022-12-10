@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 })
 app.use(express.json())
 app.post('/api/filterList', (req,res)=>{
-    res.send(resolve.filterList(req.body.language, req.body.total, req.body.start,req.body.computelist, req.body.filter, req.body.LastWord))
+    res.send(resolve.filterList(req.body.language, req.body.word_length, req.body.start_letter,req.body.wordlist, req.body.answer, req.body.last_word))
 })
 
 app.post('/api/ChooseBestWord', (req,res)=>{
