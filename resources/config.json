@@ -1,1 +1,8 @@
-{"languages":["french","english","nerdle","italian","portugues","dutch","spanish"]}
+{
+  "languages": ["french","english","nerdle","italian","portugues","dutch","spanish"],
+  "ui": {
+    "title": "Wordle Solver",
+    "prompt": "Enter your word list (comma separated):",
+    "result": "Best word to try:"
+  }
+}
