@@ -58,76 +58,42 @@ function computePower(computelist) {
 
 function clean() {
     var fs = require('fs');
-    console.log("clean the dictionnary");
-    
-    const myArgs = process.argv.slice(2);
-    if (myArgs.length === 0) {
-        throw new Error('Language parameter is required');
-    }
-    const language = myArgs[0];
-    if (typeof language !== 'string' || language.trim() === '') {
-        throw new Error('Invalid language parameter');
-    }
+    console.log("clean the dictionnary")
+    var rawlist = fs.readFileSync('resources/rawlist.csv').toString().split("\n");
 
-    let rawlist;
-    try {
-        rawlist = fs.readFileSync('resources/rawlist.csv', 'utf8').toString().split("\n");
-        if (rawlist.length === 0) {
-            throw new Error('rawlist.csv is empty');
-        }
-    } catch (err) {
-        console.error('Error reading rawlist.csv:', err.message);
-        process.exit(1);
-    }
+    const myArgs = process.argv.slice(2);
+
+    const language = myArgs[0];
 
     var newlist = [];
     for (let index in rawlist) {
         if (!rawlist[index].includes('-') && !rawlist[index].includes('#') && !rawlist[index].includes('\''))
             newlist.push(rawlist[index].replace(" ", "").toUpperCase());
     }
-    console.log(rawlist.length);
-    console.log(newlist.length);
-    const unique = [...new Set(newlist)];
-    console.log(unique.length);
-    
-    try {
-        fs.writeFileSync(`resources/${language}.csv`, unique.join('\n'), 'utf8');
-    } catch (err) {
-        console.error('Error writing language file:', err.message);
-        process.exit(1);
-    }
+    console.log(rawlist.length)
+    console.log(newlist.length)
+    const unique = [...new Set(newlist)]
+    console.log(unique.length)
+    fs.writeFileSync(`resources/${language}.csv`, unique.join('\n'));
 }
 
 
 
 function computeAll() {
-    console.log("start first stat phase");
+    console.log("start first stat phase")
     var fs = require('fs');
 
     const myArgs = process.argv.slice(2);
-    if (myArgs.length === 0) {
-        throw new Error('Language parameter is required');
-    }
+
     const language = myArgs[0];
-    if (typeof language !== 'string' || language.trim() === '') {
-        throw new Error('Invalid language parameter');
-    }
     console.log('myArgs: ', language);
 
     if (!fs.existsSync(`resources/${language}.csv`)) {
-        throw new Error(`Language file for ${language} does not exist`);
+        console.log("please fill language")
+        return;
     }
 
-    let rawlist;
-    try {
-        rawlist = fs.readFileSync(`resources/${language}.csv`, 'utf8').toString().split("\n");
-        if (rawlist.length === 0) {
-            throw new Error('Language file is empty');
-        }
-    } catch (err) {
-        console.error('Error reading language file:', err.message);
-        process.exit(1);
-    }
+    rawlist = fs.readFileSync(`resources/${language}.csv`).toString().split("\n");
 
     let cmpt = 2;
     let result = [];
@@ -138,53 +104,23 @@ function computeAll() {
         if (filterlist.length == 0)
             break;
 
-        result.push({ word_length: cmpt, best_word: computePower(filterlist) });
+        result.push({ word_length: cmpt, best_word: computePower(filterlist) })
         cmpt++;
     }
 
     //update first shoot json file
-    let firstshoot;
-    try {
-        const firstShootData = fs.readFileSync('resources/firstShoot.json', 'utf8');
-        firstshoot = JSON.parse(firstShootData);
-        if (!firstshoot) {
-            throw new Error('Invalid firstShoot.json data');
-        }
-    } catch (err) {
-        console.error('Error reading firstShoot.json:', err.message);
-        process.exit(1);
-    }
+    var firstshoot = JSON.parse(fs.readFileSync('resources/firstShoot.json'))
 
     firstshoot[language] = result;
 
-    try {
-        fs.writeFileSync(`resources/firstShoot.json`, JSON.stringify(firstshoot, null, 2), 'utf8');
-    } catch (err) {
-        console.error('Error writing firstShoot.json:', err.message);
-        process.exit(1);
-    }
+    fs.writeFileSync(`resources/firstShoot.json`, JSON.stringify(firstshoot));
 
     //update the config file to add the new available language
-    let config;
-    try {
-        const configData = fs.readFileSync("resources/config.json", 'utf8');
-        config = JSON.parse(configData);
-        if (!config || !Array.isArray(config.languages)) {
-            throw new Error('Invalid config.json data');
-        }
-    } catch (err) {
-        console.error('Error reading config.json:', err.message);
-        process.exit(1);
-    }
 
+    let config = JSON.parse(fs.readFileSync("resources/config.json"));
     if (!config.languages.includes(language)) {
         config.languages.push(language);
-        try {
-            fs.writeFileSync('resources/config.json', JSON.stringify(config, null, 2), 'utf8');
-        } catch (err) {
-            console.error('Error writing config.json:', err.message);
-            process.exit(1);
-        }
+        fs.writeFileSync('resources/config.json', JSON.stringify(config))
     }
 }
 

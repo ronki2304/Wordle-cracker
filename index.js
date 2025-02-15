@@ -1,131 +1,145 @@
 const readline = require('readline');
-const config = require('./resources/config.json');
 let loop = 0 //count how many time to find the word and store it in config
 
 // determine which is the word that have most correspondance
 function computePower(computelist, secondturn=false) {
-    // Create a frequency map for each position in the words
-    const letterFrequency = Array.from({length: computelist[0].length}, () => ({}));
-    
-    // First pass: build frequency map
-    for (const word of computelist) {
-        for (let i = 0; i < word.length; i++) {
-            const letter = word[i];
-            letterFrequency[i][letter] = (letterFrequency[i][letter] || 0) + 1;
-        }
-    }
+    let bestword = [], result = 0;
 
-    // Second pass: score each word based on frequency
-    const wordScores = new Map();
-    let maxScore = 0;
-    let bestWords = [];
 
-    for (const word of computelist) {
-        let score = 0;
-        const usedLetters = new Set();
-        
-        for (let i = 0; i < word.length; i++) {
-            const letter = word[i];
-            if (!usedLetters.has(letter)) {
-                score += letterFrequency[i][letter] || 0;
-                usedLetters.add(letter);
+    for (let word in computelist) {
+        let wordchars = computelist[word].split('');
+        let tempRes = 0;
+
+        //compute the score of all word in the list against all word in the list
+        //the higher wins
+        for (let i = 0; i < computelist.length; i++) {
+            let dicoword = computelist[i].split('');
+            for (let j = 0; j < wordchars.length; j++) {
+                if (dicoword.includes(wordchars[j])) {
+                    tempRes += 1;
+
+                    //replace the letter by _ to get multiple same letter
+
+                    for (let a in dicoword) {
+                        if (dicoword[a] == wordchars[j]) {
+                            dicoword[a] = '_';
+                        }
+                    }
+                }
             }
         }
 
-        wordScores.set(word, score);
-        
-        if (score > maxScore) {
-            maxScore = score;
-            bestWords = [word];
-        } else if (score === maxScore) {
-            bestWords.push(word);
+        if (result == tempRes) {
+            bestword.push(computelist[word]);
         }
+
+        if (result < tempRes ) {
+            result = tempRes;
+            bestword = [];
+            bestword.push(computelist[word]);
+
+        }
+       
+
     }
+    
+    
 
     //let's try to find the most relevant word in the list proposed just below
-    if (bestWords.length > 1 && !secondturn) {
-        computePower(bestWords, true);
+    if (bestword.length>1 && !secondturn)
+    {
+        computePower(bestword,true);
     }
-    else {
-        console.log("here is the list of best words to apply " + bestWords.join(', '));
+    else{
+        console.log("here is the list of best words to apply " + bestword);
     }
 }
 
 //filter the dic list with the filter mask based on the last word
 function filterList(computelist, filter, LastWord) {
-    const filters = filter.split(' ');
-    const lastWordLetters = LastWord.split('');
-    const filteredlist = [];
+    let filteredlist = [];
+    let filters = filter.split(' ');
+    CharLastWord = LastWord.split('');
 
-    // Precompute letter positions for quick lookup
-    const requiredLetters = new Set();
-    const excludedLetters = new Set();
-    const positionRequirements = new Map();
+    for (let i = 0; i < computelist.length; i++) {
+        let activeWord = computelist[i].split('');
+        let maskword = LastWord.split('');
 
-    for (let i = 0; i < filters.length; i++) {
-        const filterVal = filters[i];
-        const letter = lastWordLetters[i];
-        
-        if (filterVal === '2') {
-            positionRequirements.set(i, letter);
-            requiredLetters.add(letter);
-        } else if (filterVal === '1') {
-            requiredLetters.add(letter);
-        } else if (filterVal === '0') {
-            excludedLetters.add(letter);
-        }
-    }
 
-    // Filter words in single pass
-    for (const word of computelist) {
-        const wordLetters = word.split('');
-        let isValid = true;
+        let add = true; //at the end if = equal true then add the word to the filtered list
 
-        // Check position requirements first
-        for (const [index, requiredLetter] of positionRequirements) {
-            if (wordLetters[index] !== requiredLetter) {
-                isValid = false;
+        //first check all 2 are ok
+
+        for (let j = 0; j < filters.length; j++) {
+            if (filters[j] == 2 && activeWord[j] == maskword[j]) {
+                activeWord[j] = '_';
+                maskword[j] = '_';
+            }
+            if (filters[j] == 2 && activeWord[j] != maskword[j]) {
+                add = false;
                 break;
             }
         }
+        //if all 2 are not compliant then go next word
+        if (!add)
+            continue;
 
-        if (!isValid) continue;
+        //if all ok now filter words with letter not at the right place
+        for (let j = 0; j < filters.length; j++) {
+            if (filters[j] == 1) {
+                if (activeWord.includes(maskword[j])) {
+                    if (maskword[j] == activeWord[j]) {
+                        add = false;
+                        break;
+                    }
+                    for (let k = 0; k < activeWord.length; k++) {
+                        if (activeWord[k] == maskword[j]) {
+                            activeWord[k] = '_';
+                            maskword[j] = '_';
+                            break;
+                        }
+                    }
+                }
+                else {
+                    add = false;
+                    break;
+                }
+            }
+        }
+        //if all 1 are not compliant then go next word
+        if (!add)
+            continue;
 
-        // Check required letters
-        for (const letter of requiredLetters) {
-            if (!wordLetters.includes(letter)) {
-                isValid = false;
+        //now exclude all letter not present
+        for (let j = 0; j < filters.length; j++) {
+            if (filters[j] == 0 && activeWord.includes(maskword[j])) {
+                add = false;
                 break;
             }
         }
+        //then add the word to the new list
+        if (add)
+            filteredlist.push(computelist[i]);
 
-        if (!isValid) continue;
 
-        // Check excluded letters
-        for (const letter of excludedLetters) {
-            if (wordLetters.includes(letter)) {
-                isValid = false;
-                break;
-            }
-        }
-
-        if (isValid) {
-            filteredlist.push(word);
-        }
     }
     console.log(filteredlist.length+" words still remain eligibles");
     return filteredlist;
+
 }
+//first check the best word in the list
 
 //load ressource file
 var fs = require('fs');
+
+//determine available language
+const config = JSON.parse(fs.readFileSync("resources/config.json"));
 
 let wordlist = [], answers = { result: '0' }, rawlist
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-
 //which languages
 const questionLanguage = () => {
     return new Promise((resolve, reject) => {
@@ -135,7 +149,6 @@ const questionLanguage = () => {
         })
     })
 }
-
 // how many letter in the word question
 const questionLetter = () => {
     return new Promise((resolve, reject) => {
@@ -145,7 +158,6 @@ const questionLetter = () => {
         })
     })
 }
-
 // what is the first letter
 const questionStart = () => {
     return new Promise((resolve, reject) => {
@@ -157,16 +169,17 @@ const questionStart = () => {
     })
 }
 
+
 // what is the word question
 const questionWord = () => {
     return new Promise((resolve, reject) => {
         rl.question('What is the word selected? ', (answer) => {
+
             answers.word = answer.toUpperCase();
             resolve()
         })
     })
 }
-
 //what is the result
 const questionResult = () => {
     return new Promise((resolve, reject) => {
@@ -198,18 +211,20 @@ rl.on('close', function () {
             if (!stat[answers.language][answers.total])
                 stat[answers.language][answers.total] = []
 
-            stat[answers.language][answers.total].push(loop);
+                stat[answers.language][answers.total].push(loop);
             
             fs.writeFileSync('resources/stat.json',JSON.stringify(stat))
         }
         else
             console.log("sorry there is a mistake in your answers or the word is not in my dictionnary")
+        
+        
+        
     }
     process.exit(0);
 });
 
 const algo = async () => {
-    console.log(config.ui.title);
     console.log("let's start");
     do {
         await questionLanguage();
@@ -221,11 +236,13 @@ const algo = async () => {
     await questionStart();
     wordlist = rawlist.filter(p => p.length == answers.total && (p.startsWith(answers.start) || !answers.start))
 
+
     while ((answers.result.includes('1') || answers.result.includes('0')) && wordlist.length > 0) {
+
         if (loop==0 && !answers.start) {
             firstTime = false;
             let first = JSON.parse(fs.readFileSync(`resources/firstShoot.json`))[answers.language];
-            console.log(`${config.ui.result} ${first.filter(p => p.word_length == answers.total)[0].best_word}`)
+            console.log(`the best word to apply is ${first.filter(p => p.word_length == answers.total)[0].best_word}`)
         }
         else {
             console.log('loading');
@@ -240,10 +257,23 @@ const algo = async () => {
         while (!answers.result.includes(' ')) //just to check you answer with the pattern
 
         wordlist = filterList(wordlist, answers.result, answers.word);
-        loop++;
+
+loop++;
     }
+
 
     rl.close()
 }
 
+
 algo();
+//algo
+//premierement trouvé le mot qui a le meilleur score dans toute la liste (logiquement c'est tjsle meme)
+// recupérer le resultat de wordle
+// filtrer la premiere liste pour n'avoir que les mots qui correspondent au resultat de wordle
+//recommencer l'etape 1
+
+// valeur pour l'entrée
+// 0 pas présent
+// 1 mal placé
+// 2 bien placé
